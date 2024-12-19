@@ -1,0 +1,17 @@
+{
+	"Test_NPC_One": {
+		"Day":[
+			{"Line": "This is a test"},
+			{"Line": "This is a test"},
+			{"Line": "This is a test"},
+			{"Line": "This is a test"},
+			{"Line": "This is a test"},
+			{"Line": "This is a test"},
+			{"Line": "This is a test"},
+			{"Line": "This is a test"},
+		],
+		"Night": [
+			{"Line": "This is a second test"}
+		]	
+	}
+}

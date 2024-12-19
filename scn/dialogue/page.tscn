@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cm3oj8vd1wlmt"]
+
+[ext_resource type="Script" path="res://src/dialogue/page.gd" id="1_08jnu"]
+[ext_resource type="Texture2D" uid="uid://cj2xy28vw7353" path="res://icon.svg" id="2_5e3q1"]
+
+[node name="Page" type="Node2D"]
+script = ExtResource("1_08jnu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(573, 50)
+scale = Vector2(0.726562, 0.492188)
+texture = ExtResource("2_5e3q1")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 705.0
+offset_top = 81.0
+offset_right = 745.0
+offset_bottom = 104.0
+
+[node name="Lines" type="Node2D" parent="."]

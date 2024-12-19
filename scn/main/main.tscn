@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxffg6l0v38r5"]
+
+[ext_resource type="Script" path="res://src/main/main.gd" id="1_kxc5r"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_kxc5r")
+
+[node name="OpenDialogue" type="Button" parent="."]
+offset_left = 32.0
+offset_top = 26.0
+offset_right = 150.0
+offset_bottom = 57.0
+text = "OpenDialogue"
+
+[node name="CloseDialogue" type="Button" parent="."]
+offset_left = 179.0
+offset_top = 25.0
+offset_right = 297.0
+offset_bottom = 56.0
+text = "CloseDialogue"
+
+[node name="FileSystem" type="Node2D" parent="."]
+
+[node name="OpenDialogue" type="FileDialog" parent="FileSystem"]
+title = "Open a File"
+position = Vector2i(100, 100)
+size = Vector2i(516, 500)
+min_size = Vector2i(500, 500)
+ok_button_text = "Open"
+file_mode = 0
+access = 2
+
+[node name="SaveDialogue" type="FileDialog" parent="FileSystem"]
+auto_translate_mode = 1
+position = Vector2i(100, 100)
+size = Vector2i(544, 500)
+access = 2
+
+[connection signal="pressed" from="OpenDialogue" to="." method="_on_open_dialogue_pressed"]
+[connection signal="pressed" from="CloseDialogue" to="." method="_on_close_dialogue_pressed"]
+[connection signal="file_selected" from="FileSystem/OpenDialogue" to="." method="_on_open_dialogue_file_selected"]
